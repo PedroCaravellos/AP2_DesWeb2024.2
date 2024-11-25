@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogadores</title>
+    <script type="text/javascript" src="./assets/criptografia.js"></script>
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/icon.jfif">
+
+</head>
+<body>
+    <div id="login" class="login-tela">
+        <div class="login-conteudo">
+            <h2>Atletas do Botafogo em 2024</h2>
+            <div>Criado com objetivo exclusivamente didático para a disciplina Desenvolvimento Web</div>
+        </div>
+        <div class="login-entrada">
+            <div class="input-entrada">
+                <form onsubmit="event.preventDefault(); login()">
+                    <input type="text" placeholder="Informe a senha">
+                    <button type="submit">ENTRAR</button>
+                </form>
+            </div>
+            <div>Efetue login com a senha: SENHA</div>
+        </div>
+    </div>
+
+
+    <div id="app" class="esconder">
+        <div class="titulo">
+            <div>
+                <h1>Elenco profissional</h1>
+            </div>
+        </div>
+        <div class="btnSair">
+            <button onclick="sair()">Sair</button>
+        </div>
+        <div class="pesquisar">
+            <div class="btns">
+                <button type="button" id="todos" class="navegacao" onclick="buscarJogadores('all')">
+                    Todos
+                </button>
+                <button type="button" id="btnFeminino" class="navegacao" onclick="buscarJogadores('feminino')">
+                    Feminino
+                </button>
+                <button type="button" id="btnMasculino" class="navegacao" onclick="buscarJogadores('masculino')">
+                    Masculino
+                </button>
+            </div>
+            <input type="search" id="pesquisa">
+        </div>
+        <div id="masculino">
+            <h2 class="subtitulo">Elenco masculino</h2>
+            <div class="conteudo"></div>
+        </div>
+        <div id="feminino">
+            <h2 class="subtitulo">Elenco feminino</h2>
+            <div class="conteudo"></div>
+        </div>
+    </div>
+
+    <script src="src/index.js"></script>
+</body>
+</html>
